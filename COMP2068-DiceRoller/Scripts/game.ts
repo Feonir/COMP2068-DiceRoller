@@ -4,24 +4,27 @@
 *Date: February 19
 *This program rolls 2 random numbers bound to 1 - 6. Then displays the results in text and bitmap form.
 */
+
+
 //Global Vars
 var canvas;
-var stage;
+var stage: createjs.Stage;
 
 //Dice Roller Assets and Stage Containers
-var game;
-var firstDie;
-var secondDie;
+var game: createjs.Container;
+var firstDie: createjs.Bitmap;
+var secondDie: createjs.Bitmap;
 
 //GUI Controls
-var buttonLabel;
-var firstDieResult;
-var secondDieResult;
-var rollButton;
+var buttonLabel: createjs.Text;
+var firstDieResult: createjs.Text;
+var secondDieResult: createjs.Text;
+var rollButton: createjs.Bitmap;
 
 //Data Vars
-var firstRoll;
-var secondRoll;
+var firstRoll: String;
+var secondRoll: String;
+
 
 function init() {
     canvas = document.getElementById("canvas");
@@ -42,7 +45,7 @@ function main() {
     rollButton.y = stage.canvas.height * 0.2;
     rollButton.regX = 110;
     rollButton.regY = 110;
-
+    
     rollButton.addEventListener("click", buttonClicked);
     rollButton.addEventListener("mouseover", buttonOver);
     rollButton.addEventListener("mouseout", buttonOut);
@@ -77,6 +80,7 @@ function gameLoop() {
 // done an array of images and just yanked the one I needed as well as adding all assets to a container for easy cleaning and sizing
 // but as always in Tom's midterms time is a cruel Mistress and one I shant upset by dallying with wants and should haves. :c
 function buttonClicked() {
+
     //Remove elements so as not to clog memory and make a mess.
     if (firstDie) {
         stage.removeChild(firstDie);
@@ -92,9 +96,9 @@ function buttonClicked() {
     }
 
     //Programatically roll our dice.
-    var firstDiceRoll = Math.floor((Math.random() * 6) + 1);
-    var secondDiceRoll = Math.floor((Math.random() * 6) + 1);
-
+    var firstDiceRoll = Math.floor((Math.random() * 6) + 1)
+    var secondDiceRoll = Math.floor((Math.random() * 6) + 1)
+    
     //Strings are nice things.
     firstRoll = firstDiceRoll.toString();
     secondRoll = secondDiceRoll.toString();
@@ -117,7 +121,6 @@ function buttonClicked() {
     firstDieResult.y = stage.canvas.height * 0.6 - 20;
     firstDieResult.regX = buttonLabel.getBounds().width * 0.5;
     firstDieResult.regY = buttonLabel.getBounds().height * 0.5;
-
     //Text Results For rolled Dice
     secondDieResult = new createjs.Text(secondDiceRoll.toString(), "40px Consolas", "#000000");
     stage.addChild(secondDieResult);
@@ -131,6 +134,7 @@ function buttonClicked() {
     stage.addChild(secondDie);
     stage.addChild(firstDieResult);
     stage.addChild(secondDieResult);
+    
 }
 
 function buttonOut() {
@@ -140,3 +144,8 @@ function buttonOut() {
 function buttonOver() {
     rollButton.alpha = 0.5;
 }
+
+
+
+
+
