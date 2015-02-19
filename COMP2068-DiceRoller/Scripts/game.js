@@ -36,12 +36,12 @@ function init() {
 // Set up assets and create the die pictures as if it was already rolled and awaiting new roll. Add event handlers.
 function main() {
     // Bitmap Button for rolling our dice
-    rollButton = new createjs.Bitmap("assets/images/blueButton.png");
+    rollButton = new createjs.Bitmap("assets/images/rollButton.png");
     stage.addChild(rollButton);
     rollButton.x = stage.canvas.width * 0.5;
     rollButton.y = stage.canvas.height * 0.2;
-    rollButton.regX = 110;
-    rollButton.regY = 110;
+    rollButton.regX = 122;
+    rollButton.regY = 45;
 
     rollButton.addEventListener("click", buttonClicked);
     rollButton.addEventListener("mouseover", buttonOver);
@@ -140,3 +140,4 @@ function buttonOut() {
 function buttonOver() {
     rollButton.alpha = 0.5;
 }
+//# sourceMappingURL=game.js.map

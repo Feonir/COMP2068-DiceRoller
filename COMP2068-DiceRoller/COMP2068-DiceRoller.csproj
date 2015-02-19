@@ -75,6 +75,7 @@
     <Content Include="assets\images\5die.png" />
     <Content Include="assets\images\6die.png" />
     <Content Include="assets\images\blueButton.png" />
+    <Content Include="assets\images\rollButton.png" />
     <Content Include="COMP2068-CreateJSBoilerPlate.csproj" />
     <Content Include="css\game.css" />
     <Content Include="index.html" />
