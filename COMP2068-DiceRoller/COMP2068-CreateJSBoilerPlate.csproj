@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E72D2F2D-AD67-4FC4-A22E-143852497C0D}</ProjectGuid>
+    <ProjectGuid>{7B9E8DCA-5302-4688-B31A-37F1E7594BCA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>COMP2068_DiceRoller</RootNamespace>
-    <AssemblyName>COMP2068-DiceRoller</AssemblyName>
+    <RootNamespace>COMP2068_CreateJSBoilerPlate</RootNamespace>
+    <AssemblyName>COMP2068-CreateJSBoilerPlate</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -59,7 +59,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\game.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -68,17 +67,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\images\1die.png" />
-    <Content Include="assets\images\2die.png" />
-    <Content Include="assets\images\3die.png" />
-    <Content Include="assets\images\4die.png" />
-    <Content Include="assets\images\5die.png" />
-    <Content Include="assets\images\6die.png" />
     <Content Include="assets\images\blueButton.png" />
-    <Content Include="COMP2068-CreateJSBoilerPlate.csproj" />
     <Content Include="css\game.css" />
     <Content Include="index.html" />
-    <Content Include="Scripts\game.js" />
     <Content Include="Scripts\lib\easeljs-0.8.0.min.js" />
     <Content Include="Scripts\lib\preloadjs-0.6.0.min.js" />
     <Content Include="Scripts\lib\soundjs-0.6.0.min.js" />
@@ -97,6 +88,10 @@
     <TypeScriptCompile Include="Scripts\lib\soundjs.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\tweenjs.d.ts" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\audio\" />
+    <Folder Include="assets\fonts\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -111,9 +106,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1812</DevelopmentServerPort>
+          <DevelopmentServerPort>12288</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1812/</IISUrl>
+          <IISUrl>http://localhost:12288/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
